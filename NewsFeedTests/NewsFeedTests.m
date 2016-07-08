@@ -8,6 +8,10 @@
 
 #import <XCTest/XCTest.h>
 
+// Models
+#import "News.h"
+
+
 @interface NewsFeedTests : XCTestCase
 
 @end
@@ -27,6 +31,12 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+}
+
+- (void)testNewsSourceTitle {
+    NSString *newsSourceTitle = @"Lenta.ru : Новости";
+    XCTAssertEqualObjects(@"Lenta.ru", [News sourceTitle:newsSourceTitle]);
+    
 }
 
 - (void)testPerformanceExample {
